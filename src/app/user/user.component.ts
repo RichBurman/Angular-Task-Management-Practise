@@ -1,4 +1,4 @@
-import { Component, computed, Input, signal, input, Output, EventEmitter } from '@angular/core';
+import { Component, computed, Input, signal, input, Output, EventEmitter, output } from '@angular/core';
 
 // import { DUMMY_USERS } from '../dummy-users';
 
@@ -15,6 +15,7 @@ export class UserComponent {
   @Input({required: true}) avatar!: string;
   @Input({required: true}) name!: string;
   @Output() select = new EventEmitter();
+  // select = output<string>();
 
   // Below is how to use the signal and computed functions instead of the @Input decorator
 
